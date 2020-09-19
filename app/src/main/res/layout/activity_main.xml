@@ -6,13 +6,154 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_background_f_activity"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/input_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Имя"
+        android:textColor="#26B5B5B5"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_famely"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Фамилия"
+        android:textColor="#26B5B5B5"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/input_name"
+        app:layout_constraintStart_toStartOf="@+id/input_name"
+        app:layout_constraintTop_toBottomOf="@+id/input_name" />
+
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Пароль"
+        android:textColor="#26B5B5B5"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/input_famely"
+        app:layout_constraintStart_toStartOf="@+id/input_famely"
+        app:layout_constraintTop_toBottomOf="@+id/input_famely" />
+
+    <EditText
+        android:id="@+id/input_check_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="textPersonName"
+        android:text="Подтвердите пароль"
+        android:textColor="#26B5B5B5"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/input_password"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/input_password"
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        style="@android:style/Widget.DatePicker"
+        android:layout_width="239dp"
+        android:layout_height="167dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="#2E393D"
+        android:headerBackground="@drawable/ic_registration"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/batbackground"
+        app:layout_constraintEnd_toEndOf="@+id/input_check_password"
+        app:layout_constraintStart_toStartOf="@+id/input_check_password"
+        app:layout_constraintTop_toBottomOf="@+id/input_check_password"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/batbackground"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_bot_f_activity"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/backgroundreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_registration"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/buttonreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="REGISTRATION"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundreg"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundreg"
+        app:layout_constraintStart_toStartOf="@+id/backgroundreg"
+        app:layout_constraintTop_toTopOf="@+id/backgroundreg" />
+
+    <TextView
+        android:id="@+id/birthbay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="65dp"
+        android:fontFamily="sans-serif-medium"
+        android:orientation="horizontal"
+        android:text="Дата рождения"
+        android:textColor="#39B5B5B5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/datePicker"
+        app:layout_constraintEnd_toEndOf="@+id/input_check_password"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="@+id/input_check_password"
+        app:layout_constraintTop_toBottomOf="@+id/input_check_password"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
