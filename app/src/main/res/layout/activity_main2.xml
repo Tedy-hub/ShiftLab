@@ -13,11 +13,11 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_background_s_activity"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_background_second_activs"
         tools:ignore="VectorDrawableCompat" />
 
     <ImageView
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.553"
-        app:srcCompat="@drawable/ic_buttonhello"
+        app:srcCompat="@drawable/ic_button_second_activs"
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
@@ -40,9 +40,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="Press"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:text="Приветствие"
+        android:textColor="#B0465461"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonhello"
         app:layout_constraintEnd_toEndOf="@+id/buttonhello"
         app:layout_constraintStart_toStartOf="@+id/buttonhello"

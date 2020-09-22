@@ -2,6 +2,7 @@ package com.example.shiftlab
 
 import android.content.Context
 import android.os.Bundle
+import android.view.KeyEvent
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -23,7 +24,7 @@ class MainActivity2 : AppCompatActivity() {
 
             var builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder.setTitle("Приветствие")
-                .setMessage("Здраствуй " + UserName.toString() + " " + UserFamely.toString() + " "+UserName.toString()+" " +UserFamely.toString() + " "+ UserBirthDay.toString())
+                .setMessage("Здраствуй " + UserName.toString() + " " + UserFamely.toString() + " "+ UserBirthDay.toString())
                 .setCancelable(false)
                 .setPositiveButton("Круто") { dialog, id ->
                     dialog.cancel()
@@ -34,6 +35,10 @@ class MainActivity2 : AppCompatActivity() {
         }
 
 
+    }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        return if (keyCode == KeyEvent.KEYCODE_BACK) { true }
+        else {false}
     }
 
 
